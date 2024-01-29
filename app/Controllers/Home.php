@@ -62,4 +62,20 @@ class Home extends BaseController
         echo view ('user', $data);
         echo view ('footer');
     }
+
+    public function barang()
+    {
+
+        $model = new M_model();
+        echo view ('header');
+        echo view ('menu');
+        echo view ('barang');
+        echo view ('footer');
+    }
+
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to('home/login');
+    }
 }
