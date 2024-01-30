@@ -67,9 +67,10 @@ class Home extends BaseController
     {
 
         $model = new M_model();
+        $data['dt'] = $model->tampil('barang');
         echo view ('header');
         echo view ('menu');
-        echo view ('barang');
+        echo view ('barang', $data);
         echo view ('footer');
     }
 
