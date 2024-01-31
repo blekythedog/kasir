@@ -93,13 +93,13 @@
                 <i class="menu-icon tf-icons bx bx-add"></i>
               </a>
               <div style="padding-bottom : 10px;">
-                <a href="<?= base_url('home/tambah_barang') ?>">
+                <a href="<?= base_url('home/tambah_barang_masuk') ?>">
                   <button class="btn btn-primary d-grid w-10"><i class="menu-icon tf-icons bx bx-box"></i>
                   </button>
                 </a>
               </div>
               <div class="card">
-                <h5 class="card-header">Table Barang</h5>
+                <h5 class="card-header">Table Barang Masuk</h5>
                 <div class="table-responsive text-nowrap">
                   <table class="table">
                     <thead>
@@ -109,7 +109,8 @@
                         <th>Kode Barang</th>
                         <th>Harga</th>
                         <th>Stok</th>
-                        <th>Tanggal</th>
+                        <th>Nama Supplier</th>
+                        <th>Tanggal Masuk</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -123,6 +124,7 @@
                           <td><?php echo $no++ ?></td>
                           <td><?php echo $table->nama_barang ?></td>
                           <td><?php echo $table->kode_barang ?></td>
+                          <td><?php echo $table->Harga ?></td>
                           <td><?php echo $table->jumlah ?></td>
                           <td><?php echo $table->nama_supplier?></td>
                           <td><?php echo $table->tanggal_masuk?></td>

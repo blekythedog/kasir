@@ -127,7 +127,7 @@
                           <td><?php echo $table->stok?></td>
                           <td><?php echo $table->tanggal?></td>
                           <td>
-                            <a href="<?= base_url('home/edit_barang' . $table->id_barang) ?>"><button class="btn btn-primary"><i class="menu-icon tf-icons bx bx-box"></i></button></a>
+                            <a href="<?= base_url('home/edit_barang' . $table->id_barang) ?>"><button class="btn btn-primary"><i class="menu-icon tf-icons bx bx-recycle"></i></button></a>
                             <a href="<?= base_url('home/delete_barang' . $table->id_barang) ?>"><button class="btn btn-danger"><i class="menu-icon tf-icons bx bx-exit"></i></button></a>
 
                           </td>
