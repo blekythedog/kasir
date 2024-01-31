@@ -75,6 +75,11 @@
             <div>Barang masuk</div>
           </a>
         </li>
+        <li class="menu-item">
+          <a href="<?= base_url('home/penjualan') ?>" class="menu-link">
+            <div>Penjualan</div>
+          </a>
+        </li>
       </ul>
     </li>
     <li class="menu-header small text-uppercase"><span class="menu-header-text">Data</span></li>

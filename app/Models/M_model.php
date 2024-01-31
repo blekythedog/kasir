@@ -24,6 +24,11 @@ class M_model extends Model
 		return $this->db->table($table)->update($data, $where);
 	}
 
+	public function join($table, $table2, $on)
+	{
+		return $this->db->table($table)->join($table2, $on)->get()->getResult();
+	}
+
 	public function join2($table1, $table2, $on){
 		return $this->db->table($table1)->join($table2, $on, 'left')->get()->getResult();
 	}

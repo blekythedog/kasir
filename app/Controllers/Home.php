@@ -79,4 +79,25 @@ class Home extends BaseController
         session()->destroy();
         return redirect()->to('home/login');
     }
+
+    public function barang_masuk()
+    {
+        $model = new M_model();
+        $on = ('barang_masuk.id_barang = barang.id_barang');
+        $data['dt'] = $model->join('barang_masuk' , 'barang', $on);
+        echo view ('header');
+        echo view ('menu');
+        echo view ('barang_masuk', $data);
+        echo view ('footer');
+    }
+
+    public function tambah_barang()
+    {
+        $model = new M_model();
+        $data['dt'] = $model->tampil('barang');
+        echo view ('header');
+        echo view ('menu');
+        echo view ('tambah_barang', $data);
+        echo view ('footer');
+    }
 }
