@@ -124,30 +124,35 @@ class Home extends BaseController
     public function i_bm()
     {
         $model = new M_model();
-        $a = $this->request->getPost('nam_barang');
-        $b = $this->request->getPost('kode_barang');
-        $c = $this->request->getPost('harga');
-        $d = $this->request->getPost('stok');
+        $id = $this->request->getPost('id_barang');
+        $a = $this->request->getPost('nama_barang');
+        $b = $this->request->getPost('jumlah');
+        $c = $this->request->getPost('nama_supplier');
 
         $data = array(
             'nama_barang' => $a,
-            'kode_barang'=> $b,
-            'harga'=> $c,
-            'stok'=> $d,
+            'stok'=> $b,
             'tanggal' => date('Y-m-d H:i:s')
         );
+        $where['id_barang'] = $id;
+        $model->edit('barang' , $data, $where);
 
-        $model->simpan('barang' , $data);
-        return redirect()->to('home/barang');
+        $data2 = array(
+            'jumlah' => $b,
+            'nama_supplier'=> $c,
+            'tanggal_masuk' => date('Y-m-d H:i:s')
+        );
+        $model->simpan('barang_masuk', $data2);
+        return redirect()->to('home/barang_masuk');
     }
 
     public function tambah_barang_masuk()
     {
         $model = new M_model();
-        $data['dt'] = $model->tampil('barang_masuk');
+        $data['dt'] = $model->tampil('barang');
         echo view ('header');
         echo view ('menu');
-        echo view ('tambah_barang_masuk');
+        echo view ('tambah_barang_masuk', $data);
         echo view ('footer');
     }
 

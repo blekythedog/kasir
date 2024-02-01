@@ -88,7 +88,7 @@
                     <form action="<?= base_url('home/i_bm') ?>" method="post">
                         <div class="col-md-6 d-flex align-items-center justify-content-center" style="position: relative;">
                             <div class="card mb-4" style="width : 100%;">
-                                <h5 class="card-header">Tambah Barang</h5>
+                                <h5 class="card-header">Tambah Barang Masuk</h5>
                                 <div class="card-body demo-vertical-spacing demo-only-element">
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon11"><i class="menu-icon tf-icons bx bx-box"></i></span>
@@ -105,19 +105,13 @@
 
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon14"><i class="menu-icon tf-icons bx bx-home"></i></span>
-                                        <input class="form-control" name="kode_barang" placeholder="Kode Barang">
-                                        </input>
-                                    </div>
-
-                                    <div class="input-group">
-                                        <span class="input-group-text" id="basic-addon14"><i class="menu-icon tf-icons bx bx-money"></i></span>
-                                        <input class="form-control" name="harga" placeholder="Harga">
+                                        <input class="form-control" name="jumlah" placeholder="jumlah">
                                         </input>
                                     </div>
 
                                     <div class="input-group">
                                         <span class="input-group-text" id="basic-addon14"><i class="menu-icon tf-icons bx bx-ball"></i></span>
-                                        <input class="form-control" name="stok" placeholder="Stok">
+                                        <input class="form-control" name="nama_supplier" placeholder="Nama Supplier">
                                         </input>
                                     </div>
 

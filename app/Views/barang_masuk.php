@@ -106,9 +106,7 @@
                       <tr>
                         <th>No</th>
                         <th>Nama Barang</th>
-                        <th>Kode Barang</th>
-                        <th>Harga</th>
-                        <th>Stok</th>
+                        <th>Jumlah</th>
                         <th>Nama Supplier</th>
                         <th>Tanggal Masuk</th>
                         <th>Action</th>
@@ -123,8 +121,6 @@
                         <tr>
                           <td><?php echo $no++ ?></td>
                           <td><?php echo $table->nama_barang ?></td>
-                          <td><?php echo $table->kode_barang ?></td>
-                          <td><?php echo $table->Harga ?></td>
                           <td><?php echo $table->jumlah ?></td>
                           <td><?php echo $table->nama_supplier?></td>
                           <td><?php echo $table->tanggal_masuk?></td>

@@ -20,7 +20,7 @@ class M_model extends Model
 		return $this->db->table($table)->getWhere($where)->getRow();
 	}
 
-	public function qedit($table, $data, $where){
+	public function edit($table, $data, $where){
 		return $this->db->table($table)->update($data, $where);
 	}
 
